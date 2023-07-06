@@ -1,0 +1,45 @@
+PATH
+  remote: .
+  specs:
+    clauneck (0.0.1)
+      brotli (~> 0.4.0)
+      concurrent-ruby (~> 1.2, >= 1.2.2)
+      csv (~> 3.2, >= 3.2.7)
+      faraday (~> 2.7, >= 2.7.9)
+      json (~> 2.6, >= 2.6.3)
+      optparse (~> 0.3.1)
+      stringio (~> 3.0, >= 3.0.7)
+      zlib (~> 3.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    brotli (0.4.0)
+    concurrent-ruby (1.2.2)
+    csv (3.2.7)
+    faraday (2.7.9)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
+    json (2.6.3)
+    optparse (0.3.1)
+    ruby2_keywords (0.0.5)
+    stringio (3.0.7)
+    zlib (3.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  brotli (~> 0.4.0)
+  clauneck!
+  concurrent-ruby (~> 1.2, >= 1.2.2)
+  csv (~> 3.2, >= 3.2.7)
+  faraday (~> 2.7, >= 2.7.9)
+  json (~> 2.6, >= 2.6.3)
+  optparse (~> 0.3.1)
+  stringio (~> 3.0, >= 3.0.7)
+  zlib (~> 3.0)
+
+BUNDLED WITH
+   2.4.12
