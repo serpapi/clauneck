@@ -180,6 +180,7 @@ You can find cached links manually from Google Searches as shown below:
 
 ![image](https://user-images.githubusercontent.com/73674035/251461862-5cc1e279-9d5c-4885-aebd-317512ae62ea.png)
 
+---
 
 ## Options
 
@@ -193,9 +194,13 @@ You can find cached links manually from Google Searches as shown below:
 - `--urls`: The URLs you want to scrape. If provided, the gem will not fetch URLs from Google.
 - `--help`: Shows the help message and exits.
 
+---
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/serpapi/clauneck.
+
+---
 
 ## License
 
