@@ -1,0 +1,24 @@
+name: Ruby Gem
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Ruby 2.7.2
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7.2
+        bundler-cache: false
