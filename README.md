@@ -19,12 +19,14 @@
 
 `Clauneck` is a Ruby gem designed to scrape specific information from a series of URLs, either directly provided or fetched from Google search results via [SerpApi's Google Search API](https://serpapi.com/search-api). It extracts and matches patterns such as email addresses and social media handles from the web pages, and stores the results in a CSV file.
 
+Unlike Google Chrome extensions that need you to visit webpages one by one, Clauneck excels in bringing the list of websites to you by leveraging [SerpApi’s Google Search API](serpapi.com/search-api).
+
 ---
 
 
 ## The End Result
 
-The script will write the results in a CSV file. If it cannot find any one of the informations on a website, it will label it as `null`. For unknown errors happening in-between (connection errors, encoding errors, etc.) the fields will be filled with as `error`.
+The script will write the results in a CSV file. If it cannot find any one of the information on a website, it will label it as `null`. For unknown errors happening in-between (connection errors, encoding errors, etc.) the fields will be filled with as `error`.
 
 
 | Website             | Information          | Type of Information |
@@ -40,13 +42,14 @@ The script will write the results in a CSV file. If it cannot find any one of th
 
 ---
 
-## Prequisites
+## Prerequisites
+Since [SerpApi](https://serpapi.com) offers free credits that renew every month, and the user can access a list of free public proxies online, this tool’s pricing is technically free. You may extract data from approximately 10,000 pages (100 results in 1 page, and up to 100 pages) with a free account from [SerpApi](https://serpapi.com).
 
 - For collecting URLs to scrape, one of the following is required:
   - SerpApi API Key: You may [Register to Claim Free Credits](https://serpapi.com/users/sign_up)
-  - List of URLs in a text document (The URLs should be Google webcache links that start with `https://webcache.googleusercontent.com`)
+  - List of URLs in a text document (The URLs should be Google web cache links that start with `https://webcache.googleusercontent.com`)
 - For scraping URLs, one of the following is required:
-  - List of Proxies in a text document (You may use public proxies. Only http proxies are accepted.)
+  - List of Proxies in a text document (You may use public proxies. Only HTTP proxies are accepted.)
   - Rotating Proxy IP
 
 ---
@@ -118,7 +121,7 @@ will search for websites ending with `.ai` and at `/contact` or `/contact-us` pa
 You may check out [Google Search Operators: The Complete List (44 Advanced Operators)](https://ahrefs.com/blog/google-advanced-search-operators/) for a list of more operators
 
 ### Using Proxies for Scraping in a Text Document
-You can utilize your own proxies for scraping webcaches of the links you have acquired. Only HTTP proxies are accepted. The proxies should be in the following format
+You can utilize your own proxies for scraping web caches of the links you have acquired. Only HTTP proxies are accepted. The proxies should be in the following format
 ```
 http://username:password@ip:port
 http://username:password@another-ip:another-port
@@ -129,7 +132,7 @@ http://ip:port
 http://another-ip:another-port
 ```
 
-You can add --proxy option in command line to utilize the file:
+You can add --proxy option in the command line to utilize the file:
 ```
 clauneck --api_key YOUR_SERPAPI_KEY --proxy proxies.txt --output results.csv --q "site:*.ai AND inurl:/contact OR inurl:/contact-us"
 ```
@@ -161,15 +164,15 @@ proxy = "http://username:password@ip:port"
 Clauneck.run(api_key: api_key, params: params, proxy: proxy)
 ```
 
-The System IP Address will be used if no proxy is provided. The user can use System IP for small scale projects. But it is not recommended.
+The System IP Address will be used if no proxy is provided. The user can use System IP for small-scale projects. But it is not recommended.
 
 ### Using Google Search URL to Scrape links with SerpApi
 
-Instead of providing search parameters, the user can directly feed a Google Seach URL for the webcache links to be collected by [SerpApi's Google Search API](https://serpapi.com/search-api).
+Instead of providing search parameters, the user can directly feed a Google Search URL for the web cache links to be collected by [SerpApi's Google Search API](https://serpapi.com/search-api).
 
 ### Using URLs to Scrape in a Text Document
 
-The user may utilize their own list of urls to be scraped. The urls should start with `https://webcache.googleusercontent.com`, and be added to each line. For example:
+The user may utilize their own list of URLs to be scraped. The URLs should start with `https://webcache.googleusercontent.com`, and be added to each line. For example:
 
 ```
 https://webcache.googleusercontent.com/search?q=cache:LItv_3DO2N8J:https://serpapi.com/&cd=10&hl=en&ct=clnk&gl=cy
