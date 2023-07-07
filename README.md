@@ -21,6 +21,8 @@
 
 Unlike Google Chrome extensions that need you to visit webpages one by one, Clauneck excels in bringing the list of websites to you by leveraging [SerpApi’s Google Search API](serpapi.com/search-api).
 
+- [Cold Email Marketing with Open-Source Email Extractor](https://serpapi.com/blog/cold-email-marketing-with-open-source-email-extractor/): A Blog Post about the usecase of the tool
+
 ---
 
 
