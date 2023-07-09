@@ -19,7 +19,7 @@
 
 `Clauneck` is a Ruby gem designed to scrape specific information from a series of URLs, either directly provided or fetched from Google search results via [SerpApi's Google Search API](https://serpapi.com/search-api). It extracts and matches patterns such as email addresses and social media handles from the web pages, and stores the results in a CSV file.
 
-Unlike Google Chrome extensions that need you to visit webpages one by one, Clauneck excels in bringing the list of websites to you by leveraging [SerpApi’s Google Search API](serpapi.com/search-api).
+Unlike Google Chrome extensions that need you to visit webpages one by one, Clauneck excels in bringing the list of websites to you by leveraging [SerpApi’s Google Search API](https://serpapi.com/search-api).
 
 - [Cold Email Marketing with Open-Source Email Extractor](https://serpapi.com/blog/cold-email-marketing-with-open-source-email-extractor/): A Blog Post about the usecase of the tool
 
