@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'clauneck'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.date = '2023-07-05'
   s.summary = "Custom Lead Acquisition Using Next-Generation Extraction and Collection Kit"
   s.description = "A tool for scraping emails, social media accounts, and many more information from websites using Google Search Results."
