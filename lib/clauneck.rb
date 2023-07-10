@@ -96,10 +96,12 @@ module Clauneck
     
       parser = OptionParser.new do |opts|
         opts.on('--api_key API_KEY') { |v| options[:api_key] = v }
+        opts.on('--api-key API_KEY') { |v| options[:api_key] = v } if options[:api_key] == nil
         opts.on('--proxy PROXY') { |v| options[:proxy] = v }
         opts.on('--pages PAGES') { |v| options[:pages] = v.to_i }
         opts.on('--output OUTPUT') { |v| options[:output] = v }
         opts.on('--google_url GOOGLE_URL') { |v| options[:google_url] = v }
+        opts.on('--google-url GOOGLE_URL') { |v| options[:google_url] = v } if options[:google_url] == nil
         opts.on('--urls URLS') { |v| options[:urls] = v }
         opts.on('--help', 'Prints this help message') do
           show_help(opts)
@@ -123,11 +125,11 @@ module Clauneck
     end
     
     def known_option?(arg)
-      ['--api_key', '--proxy', '--pages', '--output', '--google_url', '--urls'].any? { |opt| arg.start_with?(opt) }
+      ['--api_key', '--api-key', '--proxy', '--pages', '--output', '--google_url', '--google-url', '--urls'].any? { |opt| arg.start_with?(opt) }
     end
 
     def requirements(options)
-      cond_1 = options[:params] && options[:params].keys.any? {|k| k == "api-key"}
+      cond_1 = options && options.keys.any? {|k| k == :api_key}
       cond_2 = options[:urls]
       cond_1 || cond_2
     end
@@ -143,7 +145,7 @@ module Clauneck
         --pages PAGES               Set the number of pages to be gathered from Google using SerpApi (Default: 1)
         --output OUTPUT             Set the csv output file (Default: output.csv)
         --google_url GOOGLE_URL     Set the Google URL that contains the webpages you want to scrape
-        --urls URLS                 Set the URLs you want to scrape information from (Required if you don't provide `--api-key` option)
+        --urls URLS                 Set the URLs you want to scrape information from (Required if you don't provide `--api_key` option)
         --help                      Prints this help message
       HELP
       exit(1)
